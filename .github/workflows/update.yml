@@ -1,0 +1,62 @@
+name: Update festival data and publish
+
+on:
+  schedule:
+    - cron: "17 11 * * *"   # every day around 5-6 AM Central
+  workflow_dispatch:         # lets you run it by hand from the Actions tab
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update-and-publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Pull the latest schedule and shop list. If the festival site looks wrong the script
+      # stops with an error and nothing is published, so the live app keeps its last good data.
+      - name: Refresh festival data
+        if: github.event_name != 'push'
+        run: python3 tools/update_data.py
+
+      - name: Save changes
+        if: github.event_name != 'push'
+        run: |
+          if [ -n "$(git status --porcelain data.js sw.js)" ]; then
+            git config user.name "faire-planner-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add data.js sw.js
+            git commit -m "Update festival data $(date -u +%F)"
+            git push
+          else
+            echo "Nothing changed."
+          fi
+
+      - name: Collect files to publish
+        run: |
+          mkdir _site
+          cp index.html data.js sw.js manifest.webmanifest trf-map.jpg _site/
+          cp -r icons fonts _site/
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
