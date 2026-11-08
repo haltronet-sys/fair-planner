@@ -1,0 +1,136 @@
+{
+ "_help": "Hand-kept details the festival page does not provide. Keyed by the act name AFTER renaming. Add an act here to mark it adult (21+), give it a length in minutes, etc.",
+ "rename": {
+  "Hanlon-Lees Action Theatre (The Joust)": "The Joust (Hanlon-Lees Action Theatre)",
+  "Antonio Albarran - The Great Antone": "Antonio Albarran, The Great Antone",
+  "The Pub Crawl - The World's MOST Pub Crawl": "The Pub Crawl"
+ },
+ "venue_rename": {
+  "The Pub Crawl": "Starts at The Tap (#162)"
+ },
+ "acts": {
+  "Barbarian Bombshells": {
+   "adult": true
+  },
+  "Costume Contest": {
+   "len": 45,
+   "tag": "Heroes & Villains"
+  },
+  "Food Eating Contest": {
+   "tag": "Heroes & Villains"
+  },
+  "The Green Hour": {
+   "adult": true
+  },
+  "The Joust (Hanlon-Lees Action Theatre)": {
+   "len": 40
+  },
+  "The King's Feast": {
+   "len": 120,
+   "ticketed": true,
+   "note": "Separate ticketed meal"
+  },
+  "Ménage à Moi Comedy": {
+   "adult": true
+  },
+  "Opal and Jade: Off Colored Treasures": {
+   "adult": true
+  },
+  "The Pub Crawl": {
+   "len": 60,
+   "note": "Listed as date dependent. Confirm at the gate."
+  },
+  "Royal Fireworks": {
+   "len": 15,
+   "tag": "Closing"
+  },
+  "Royal Proclamation": {
+   "len": 15
+  },
+  "Tease of the Seas: Pirate Burlesque": {
+   "adult": true
+  },
+  "Washing Well Wenches": {
+   "adult": true
+  }
+ },
+ "categories": {
+  "3": "Adornment",
+  "25": "Jewelry",
+  "6": "Weaponry",
+  "11": "Leatherwork",
+  "7": "Clothiers",
+  "13": "Metalwork",
+  "36": "Bars, Taverns, & Pubs",
+  "10": "Delectables",
+  "8": "For Your Castle",
+  "20": "Lotions and Potions",
+  "12": "Children's Fare",
+  "18": "At Your Service",
+  "37": "Drinks",
+  "16": "Candles and All Things Aromatic",
+  "52": "Snacks",
+  "9": "Pottery",
+  "45": "German Food",
+  "24": "Sculpting",
+  "4": "Whimsies",
+  "32": "Sweet Treats",
+  "23": "Glasswork",
+  "17": "Woodcrafters",
+  "34": "Coffee & Tea",
+  "43": "Seafood",
+  "50": "Mead",
+  "31": "Beer",
+  "14": "Musical Instruments"
+ },
+ "known": [
+  "Arsene",
+  "Barbarian Bombshells",
+  "Birds of Prey",
+  "Cantiga",
+  "Carnival of Sound",
+  "Clan Tynker",
+  "Coal Black Rose",
+  "Costume Contest",
+  "Crannog",
+  "Dublin Harpers",
+  "Food Eating Contest",
+  "Fool Hearty",
+  "Full Steel Combat",
+  "Global Dance Theatre",
+  "Istanpitta",
+  "Jim Hancock",
+  "Lester Jesterson",
+  "Mud Show",
+  "Ménage à Moi Comedy",
+  "Norðanfólk",
+  "Opal and Jade: Off Colored Treasures",
+  "Parade Matinée",
+  "PhilNick the Great",
+  "Pride of Bedlam",
+  "Ragnarök",
+  "Ravenswood Brass",
+  "Romani Roses",
+  "Rondini",
+  "Royal Fireworks",
+  "Royal Proclamation",
+  "Solar Rain",
+  "Sons of Olympus",
+  "Sound and Fury",
+  "Spice Boys",
+  "Tartanic",
+  "Tease of the Seas: Pirate Burlesque",
+  "The Green Hour",
+  "The Joust (Hanlon-Lees Action Theatre)",
+  "The King's Feast",
+  "The Pub Crawl",
+  "Theatre of Fools",
+  "Thieves of the Heart",
+  "Thomas Wood: Pyro-juggler",
+  "Tuey: Comic Stunt Juggler",
+  "Variety Hour",
+  "Washing Well Wenches",
+  "Wolgemut",
+  "Worthy Waites of Whimsey"
+ ]
+}
